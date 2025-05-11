@@ -10,6 +10,37 @@
 </head>
 <body>
     <div id="app"></div>
-    <script src="index.js" type="text/babel"></script>
+    <script type="text/babel">
+   
+   let count=0;
+    const dobav=()=>{
+    count++;
+    render();
+};
+
+    const vichet=()=>{
+    count--;
+    render();
+};
+    
+    const obnul=()=>{
+    count=0;
+    render();
+    }
+
+    const render = () => {
+    ReactDOM.render(
+        <div style={{ textAlign: 'center', marginTop: '70px' }}>
+        <h1>{count}</h1>
+        <button onClick={dobav}>+</button>
+        <button onClick={vichet}>-</button>
+        <button onClick={obnul}>скинуть</button>
+        </div>,
+    document.getElementById('app')
+    );
+};
+render();
+
+    </script>
 </body>
 </html>
