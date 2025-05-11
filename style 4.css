@@ -1,0 +1,79 @@
+:root {
+    --main-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --hover-color: #c0392b;
+}
+
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, var(--main-color), #34495e);
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 300px;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.btn-success {
+    background: var(--accent-color);
+    border: none;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.btn-success:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.banner {
+    background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)),
+                url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d') center/cover;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+footer {
+    background: var(--main-color);
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+.book-card-content {
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-card {
+    animation: fadeIn 0.6s ease-out;
+}
